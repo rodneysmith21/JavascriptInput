@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelloJavascript</title>
+</head>
+<body>
+    <h1>Hello. What is your name ?</h1>
+    <input value="" placeholder="Enter name" id="userName"/></br></br>
+    <button id="Button">Submit</button>
+    <h3 id="Message"></h3>
+
+    <style>
+        body {
+            background-color: rgb(209, 201, 201) ;
+            text-align: center;
+            color: white;
+        }
+    </style>
+    <script>
+        function firstFunction(){
+             let getButton = document.getElementById('Button');
+             getButton.addEventListener('click', (e)=>{
+                let getUserInput = document.getElementById('userName').value;
+                let getMessage = document.getElementById('Message');
+
+            getMessage.innerHTML = 'Welcome to my webpage ' + getUserInput;
+             })
+        }
+        firstFunction();
+    </script>
+</body>
+</html>
